@@ -1,14 +1,16 @@
 {
-  "name": "crudoperations",
+  "name": "react-crud",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "json-server": "^0.10.3",
     "link-react": "^3.0.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
-    "react-scripts": "1.0.10"
+    "react-scripts": "1.0.10",
+    "superagent": "^3.5.2"
   },
   "scripts": {
     "start": "react-scripts start",
