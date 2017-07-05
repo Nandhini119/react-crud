@@ -1,7 +1,7 @@
 import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import TextField from 'material-ui/TextField';
-import { Field, form } from 'redux-form';
+import Paper from 'material-ui/Paper';
 import RaisedButton from 'material-ui/RaisedButton';
 import { Link } from 'react-router-dom';
 
@@ -19,6 +19,7 @@ const style = {
     }
     getid(e)
     {
+        console.log(e.target.value);
         this.setState = e.target.value;
     }
     getname(e)
@@ -34,15 +35,17 @@ const style = {
     }
     render(){
         return(<MuiThemeProvider>
-        <form>
+        
         <div>
-         <Field hintText="Id" type="text" floatingLabelText="Enter Id*" value={this.state.Id} onChange = {this.getid.bind(this)}/><br />
-         <Field hintText="name" type="text" floatingLabelText="name*" value = {this.state.name} onchange = {this.getname.bind(this)}/><br/>
+        <Paper>
+         <TextField hintText="Id" floatingLabelText="Enter Id*" id="Id" onChange = {this.getid.bind(this,Id)}/><br />
+         <TextField hintText="name"  floatingLabelText="name*" id="name" onchange = {this.getname.bind(this,name)}/><br/>
        <Link to = '/add'> <RaisedButton label="Add" onclick = {this.passDataToAdd.bind(this)} primary={true} style={style} /></Link>
         <Link to = '/update'><RaisedButton label="Update" primary={true} style={style} /></Link>
         <Link to = '/view'><RaisedButton label="View" primary={true} style={style}/></Link>
+        </Paper>
         </div>
-        </form>
+        
         </MuiThemeProvider>);
     }
 }
