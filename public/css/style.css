@@ -1,0 +1,9 @@
+@CHARSET "UTF-8";
+
+body
+{
+   background: url('../image/movieapp-bkg.jpg');
+    background-repeat: no - repeat;
+    background-size: cover;
+    
+}
